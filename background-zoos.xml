@@ -3,6 +3,9 @@
 	<info>
 		<name>Zoos</name>
 		<description>Zoos Background</description>
+		<update version="0.0.1">
+			<file name="background-zoos.xml" url="https://raw.githubusercontent.com/Castia-ER/dndpotatocustom/main/background-zoos.xml" />
+		</update>
 	</info>
 
 	<element name="Zoos" type="Background" source="Potato's Custom Background" id="ID_POTATO_BACKGROUND_ZOOS">
@@ -11,20 +14,16 @@
 			<ul class="unstyled">
 				<li><strong>Skill Proficiencies:</strong>Insight, Perception</li>
 				<li><strong>Languages:</strong>Common, Celestial</li>
-				<li><strong>Equipment: A shortsword, a chain shirt, and a shield.</strong></li>
 			</ul>
 		</description>
 		<setters>
-			<set name="short">Insight, Perception, Common, Celestial</set>
+			<set name="short">Insight, Perception, Common Language, Celestial Language</set>
 		</setters>
 		<rules>
 			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INSIGHT" />
 			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERCEPTION" />
 			<grant type="Language" id="ID_LANGUAGE_COMMON" />
 			<grant type="Language" id="ID_LANGUAGE_CELESTIAL" />
-			<grant type="Armor" id="ID_WOTC_ARMOR_MEDIUM_CHAIN_SHIRT" />
-			<grant type="Armor" id="ID_WOTC_GEAR_SHIELD" />
-			<grant type="Weapon" id="ID_WOTC_PHB_WEAPON_SHORTSWORD" />
 			<grant type="Background Feature" id="ID_POTATO_BACKGROUND_FEATURE_ZOOSINNOCENCE" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE" />
 			<select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
 			<select type="List" name="Personality Trait" number="2">
@@ -61,7 +60,7 @@
 			</select>
 		</rules>
 	</element>
-	<element name="Feature: Zoos' Innocence" type="Background Feature" id="ID_POTATO_BACKGROUND_FEATURE_ZOOSINNOCENCE">
+	<element name="Feature: Zoos' Innocence" type="Background Feature" source="Potato's Custom Background" id="ID_POTATO_BACKGROUND_FEATURE_ZOOSINNOCENCE">
 		<supports>Background Feature</supports>
 		<description>
 			<p>As someone with reduced intelligence and awareness of the world, people who are aware of you are more inclined to treat you with kindness and trust, allowing bonds to be more easily formed. However, on the contrary, you become an easier target to be taken advantage of, as they may understand that you lack the intelligence to doubt any given lies and deception.</p>
