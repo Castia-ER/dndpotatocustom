@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Makoto</name>
+		<description>Makotos Background</description>
+		<update version="0.0.1">
+			<file name="background-makoto.xml" url="https://raw.githubusercontent.com/Castia-ER/dndpotatocustom/main/background-zoos.xml" />
+		</update>
+	</info>
+
+	<element name="Zoos" type="Background" source="Potato's Custom Background" id="ID_POTATO_BACKGROUND_ZOOS">
+		<description>
+			<p class="indent">During a scouting expedition sent by the leadership of a safehaven, a lost soul in a scholar uniform was found seemingly unconscious and murmuring by a long abandoned civilization caught in the crossfire by conquests from the current leaders of the apocalypse. The man was brought in by the scouts and was provided with emergency care for his condition. When the man came to, he was shown to be literate, although he has also shown to have extremely diminished cognitive abilities which were comparable to a wild animal. The man was asked to be called "Zoos".</p>
+			<ul class="unstyled">
+				<li><strong>Skill Proficiencies:</strong>Insight, Perception</li>
+				<li><strong>Languages:</strong>Common, Celestial</li>
+			</ul>
+		</description>
+		<setters>
+			<set name="short">Insight, Perception, Common Language, Celestial Language</set>
+		</setters>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INSIGHT" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERCEPTION" />
+			<grant type="Language" id="ID_LANGUAGE_COMMON" />
+			<grant type="Language" id="ID_LANGUAGE_CELESTIAL" />
+			<grant type="Background Feature" id="ID_POTATO_BACKGROUND_FEATURE_ZOOSINNOCENCE" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE" />
+			<select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+			<select type="List" name="Personality Trait" number="2">
+				<item id="1">I have different assumptions from those around me concerning personal space, blithely invading others' space in innocence, or reacting to ignorant invasion of my own.</item>
+				<item id="2">I have my own ideas about what is and is not food, and I find the eating habits of those around me fascinating, confusing, or revolting.</item>
+				<item id="3">I have a strong code of honor or sense of propriety that others don't comprehend.</item>
+				<item id="4">I express affection or contempt in ways that are unfamiliar to others.</item>
+				<item id="5">I honor my deities through practices that are foreign to this land.</item>
+				<item id="6">I begin or end my day with small traditional rituals that are unfamiliar to those around me.</item>
+			</select>
+			<select type="List" name="Ideal">
+				<item id="1">Open. I have much to learn from the kindly folk I meet along my way. (Good)</item>
+				<item id="2">Reserved. As someone new to these strange lands, I am cautious and respectful in my dealings. (Lawful)</item>
+				<item id="3">Adventure. I'm far from home, and everything is strange and wonderful! (Chaotic)</item>
+				<item id="4">Cunning. Though I may not know their ways, neither do they know mine, which can be to my advantage. (Evil)</item>
+				<item id="5">Inquisitive. Everything is new, but I have a thirst to learn. (Neutral)</item>
+				<item id="6">Suspicious. I must be careful, for I have no way of telling friend from foe here. (Any)</item>
+			</select>
+			<select type="List" name="Bond">
+				<item id="1">So long as I have this token from my homeland, I can face any adversity in this strange land.</item>
+				<item id="2">The gods of my people are a comfort to me so far from home.</item>
+				<item id="3">I hold no greater cause than my service to my people.</item>
+				<item id="4">My freedom is my most precious possession. I'll never let anyone take it from me again.</item>
+				<item id="5">I'm fascinated by the beauty and wonder of this new land.</item>
+				<item id="6">Though I had no choice, I lament having to leave my loved one(s) behind. I hope to see them again one day.</item>
+			</select>
+			<select type="List" name="Flaw">
+				<item id="1">I am secretly (or not so secretly) convinced of the superiority of my own culture over that of this foreign land.</item>
+				<item id="2">I pretend not to understand the local language in order to avoid interactions I would rather not have.</item>
+				<item id="3">I have a weakness for the new intoxicants and other pleasures of this land.</item>
+				<item id="4">I don't take kindly to some of the actions and motivations of the people of this land, because these folk are different from me.</item>
+				<item id="5">I consider the adherents of other gods to be deluded innocents at best, or ignorant fools at worst.</item>
+				<item id="6">I have a weakness for the exotic beauty of the people of these lands.</item>
+			</select>
+		</rules>
+	</element>
+	<element name="Feature: Zoos' Innocence" type="Background Feature" source="Potato's Custom Background" id="ID_POTATO_BACKGROUND_FEATURE_ZOOSINNOCENCE">
+		<supports>Background Feature</supports>
+		<description>
+			<p>As someone with reduced intelligence and awareness of the world, people who are aware of you are more inclined to treat you with kindness and trust, allowing bonds to be more easily formed. However, on the contrary, you become an easier target to be taken advantage of, as they may understand that you lack the intelligence to doubt any given lies and deception.</p>
+		</description>
+		<sheet name="Zoos' Innocence" />
+	</element>
+</elements>
